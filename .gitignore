@@ -10,3 +10,5 @@ Assembly-CSharp.csproj
 Assets/average_man_02.FBX.meta
 
 Assets/average_man_02.max.meta
+
+ProjectSettings/QualitySettings.asset

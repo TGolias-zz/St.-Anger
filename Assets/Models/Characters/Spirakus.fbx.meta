@@ -1,0 +1,693 @@
+fileFormatVersion: 2
+guid: 598d36a0f6dfc4dfa95b6b52a1541bcc
+timeCreated: 1439506840
+licenseType: Free
+ModelImporter:
+  serializedVersion: 18
+  fileIDToRecycleName:
+    100000: Armature
+    100002: Bone
+    100004: Bone_end
+    100006: LeftFoot
+    100008: LeftFoot_end
+    100010: LowerArm
+    100012: LowerFinger1
+    100014: LowerFinger1_end
+    100016: LowerFinger2
+    100018: LowerFinger2_end
+    100020: LowerFinger3
+    100022: LowerFinger3_end
+    100024: LowerFinger4
+    100026: LowerFinger4_end
+    100028: LowerLeftLeg
+    100030: LowerRightLeg
+    100032: med
+    100034: RightFoot
+    100036: RightFoot_end
+    100038: //RootNode
+    100040: UpperArm
+    100042: UpperFinger1
+    100044: UpperFinger2
+    100046: UpperFinger3
+    100048: UpperFinger4
+    100050: UpperLeftLeg
+    100052: UpperRightLeg
+    400000: Armature
+    400002: Bone
+    400004: Bone_end
+    400006: LeftFoot
+    400008: LeftFoot_end
+    400010: LowerArm
+    400012: LowerFinger1
+    400014: LowerFinger1_end
+    400016: LowerFinger2
+    400018: LowerFinger2_end
+    400020: LowerFinger3
+    400022: LowerFinger3_end
+    400024: LowerFinger4
+    400026: LowerFinger4_end
+    400028: LowerLeftLeg
+    400030: LowerRightLeg
+    400032: med
+    400034: RightFoot
+    400036: RightFoot_end
+    400038: //RootNode
+    400040: UpperArm
+    400042: UpperFinger1
+    400044: UpperFinger2
+    400046: UpperFinger3
+    400048: UpperFinger4
+    400050: UpperLeftLeg
+    400052: UpperRightLeg
+    4300000: med
+    7400000: Attack
+    7400002: Cry
+    7400004: Death
+    7400006: Hit
+    7400008: Idle
+    7400010: Run
+    7400012: DONTUSE
+    9500000: //RootNode
+    13700000: med
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Attack
+      takeName: Armature|Attack
+      firstFrame: 0
+      lastFrame: 149
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/Bone
+        weight: 1
+      - path: Armature/Bone/Bone_end
+        weight: 1
+      - path: Armature/UpperArm
+        weight: 1
+      - path: Armature/UpperArm/LowerArm
+        weight: 1
+      - path: Armature/UpperArm/LowerArm/UpperFinger1
+        weight: 1
+      - path: Armature/UpperArm/LowerArm/UpperFinger1/LowerFinger1
+        weight: 1
+      - path: Armature/UpperArm/LowerArm/UpperFinger1/LowerFinger1/LowerFinger1_end
+        weight: 1
+      - path: Armature/UpperArm/LowerArm/UpperFinger2
+        weight: 1
+      - path: Armature/UpperArm/LowerArm/UpperFinger2/LowerFinger2
+        weight: 1
+      - path: Armature/UpperArm/LowerArm/UpperFinger2/LowerFinger2/LowerFinger2_end
+        weight: 1
+      - path: Armature/UpperArm/LowerArm/UpperFinger3
+        weight: 1
+      - path: Armature/UpperArm/LowerArm/UpperFinger3/LowerFinger3
+        weight: 1
+      - path: Armature/UpperArm/LowerArm/UpperFinger3/LowerFinger3/LowerFinger3_end
+        weight: 1
+      - path: Armature/UpperArm/LowerArm/UpperFinger4
+        weight: 1
+      - path: Armature/UpperArm/LowerArm/UpperFinger4/LowerFinger4
+        weight: 1
+      - path: Armature/UpperArm/LowerArm/UpperFinger4/LowerFinger4/LowerFinger4_end
+        weight: 1
+      - path: Armature/UpperLeftLeg
+        weight: 1
+      - path: Armature/UpperLeftLeg/LowerLeftLeg
+        weight: 1
+      - path: Armature/UpperLeftLeg/LowerLeftLeg/LeftFoot
+        weight: 1
+      - path: Armature/UpperLeftLeg/LowerLeftLeg/LeftFoot/LeftFoot_end
+        weight: 1
+      - path: Armature/UpperRightLeg
+        weight: 1
+      - path: Armature/UpperRightLeg/LowerRightLeg
+        weight: 1
+      - path: Armature/UpperRightLeg/LowerRightLeg/RightFoot
+        weight: 1
+      - path: Armature/UpperRightLeg/LowerRightLeg/RightFoot/RightFoot_end
+        weight: 1
+      - path: med
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Cry
+      takeName: Armature|Cry
+      firstFrame: 0
+      lastFrame: 119
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/Bone
+        weight: 1
+      - path: Armature/Bone/Bone_end
+        weight: 1
+      - path: Armature/UpperArm
+        weight: 1
+      - path: Armature/UpperArm/LowerArm
+        weight: 1
+      - path: Armature/UpperArm/LowerArm/UpperFinger1
+        weight: 1
+      - path: Armature/UpperArm/LowerArm/UpperFinger1/LowerFinger1
+        weight: 1
+      - path: Armature/UpperArm/LowerArm/UpperFinger1/LowerFinger1/LowerFinger1_end
+        weight: 1
+      - path: Armature/UpperArm/LowerArm/UpperFinger2
+        weight: 1
+      - path: Armature/UpperArm/LowerArm/UpperFinger2/LowerFinger2
+        weight: 1
+      - path: Armature/UpperArm/LowerArm/UpperFinger2/LowerFinger2/LowerFinger2_end
+        weight: 1
+      - path: Armature/UpperArm/LowerArm/UpperFinger3
+        weight: 1
+      - path: Armature/UpperArm/LowerArm/UpperFinger3/LowerFinger3
+        weight: 1
+      - path: Armature/UpperArm/LowerArm/UpperFinger3/LowerFinger3/LowerFinger3_end
+        weight: 1
+      - path: Armature/UpperArm/LowerArm/UpperFinger4
+        weight: 1
+      - path: Armature/UpperArm/LowerArm/UpperFinger4/LowerFinger4
+        weight: 1
+      - path: Armature/UpperArm/LowerArm/UpperFinger4/LowerFinger4/LowerFinger4_end
+        weight: 1
+      - path: Armature/UpperLeftLeg
+        weight: 1
+      - path: Armature/UpperLeftLeg/LowerLeftLeg
+        weight: 1
+      - path: Armature/UpperLeftLeg/LowerLeftLeg/LeftFoot
+        weight: 1
+      - path: Armature/UpperLeftLeg/LowerLeftLeg/LeftFoot/LeftFoot_end
+        weight: 1
+      - path: Armature/UpperRightLeg
+        weight: 1
+      - path: Armature/UpperRightLeg/LowerRightLeg
+        weight: 1
+      - path: Armature/UpperRightLeg/LowerRightLeg/RightFoot
+        weight: 1
+      - path: Armature/UpperRightLeg/LowerRightLeg/RightFoot/RightFoot_end
+        weight: 1
+      - path: med
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Death
+      takeName: Armature|Death
+      firstFrame: 0
+      lastFrame: 134
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/Bone
+        weight: 1
+      - path: Armature/Bone/Bone_end
+        weight: 1
+      - path: Armature/UpperArm
+        weight: 1
+      - path: Armature/UpperArm/LowerArm
+        weight: 1
+      - path: Armature/UpperArm/LowerArm/UpperFinger1
+        weight: 1
+      - path: Armature/UpperArm/LowerArm/UpperFinger1/LowerFinger1
+        weight: 1
+      - path: Armature/UpperArm/LowerArm/UpperFinger1/LowerFinger1/LowerFinger1_end
+        weight: 1
+      - path: Armature/UpperArm/LowerArm/UpperFinger2
+        weight: 1
+      - path: Armature/UpperArm/LowerArm/UpperFinger2/LowerFinger2
+        weight: 1
+      - path: Armature/UpperArm/LowerArm/UpperFinger2/LowerFinger2/LowerFinger2_end
+        weight: 1
+      - path: Armature/UpperArm/LowerArm/UpperFinger3
+        weight: 1
+      - path: Armature/UpperArm/LowerArm/UpperFinger3/LowerFinger3
+        weight: 1
+      - path: Armature/UpperArm/LowerArm/UpperFinger3/LowerFinger3/LowerFinger3_end
+        weight: 1
+      - path: Armature/UpperArm/LowerArm/UpperFinger4
+        weight: 1
+      - path: Armature/UpperArm/LowerArm/UpperFinger4/LowerFinger4
+        weight: 1
+      - path: Armature/UpperArm/LowerArm/UpperFinger4/LowerFinger4/LowerFinger4_end
+        weight: 1
+      - path: Armature/UpperLeftLeg
+        weight: 1
+      - path: Armature/UpperLeftLeg/LowerLeftLeg
+        weight: 1
+      - path: Armature/UpperLeftLeg/LowerLeftLeg/LeftFoot
+        weight: 1
+      - path: Armature/UpperLeftLeg/LowerLeftLeg/LeftFoot/LeftFoot_end
+        weight: 1
+      - path: Armature/UpperRightLeg
+        weight: 1
+      - path: Armature/UpperRightLeg/LowerRightLeg
+        weight: 1
+      - path: Armature/UpperRightLeg/LowerRightLeg/RightFoot
+        weight: 1
+      - path: Armature/UpperRightLeg/LowerRightLeg/RightFoot/RightFoot_end
+        weight: 1
+      - path: med
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Hit
+      takeName: Armature|Hit
+      firstFrame: 0
+      lastFrame: 24
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/Bone
+        weight: 1
+      - path: Armature/Bone/Bone_end
+        weight: 1
+      - path: Armature/UpperArm
+        weight: 1
+      - path: Armature/UpperArm/LowerArm
+        weight: 1
+      - path: Armature/UpperArm/LowerArm/UpperFinger1
+        weight: 1
+      - path: Armature/UpperArm/LowerArm/UpperFinger1/LowerFinger1
+        weight: 1
+      - path: Armature/UpperArm/LowerArm/UpperFinger1/LowerFinger1/LowerFinger1_end
+        weight: 1
+      - path: Armature/UpperArm/LowerArm/UpperFinger2
+        weight: 1
+      - path: Armature/UpperArm/LowerArm/UpperFinger2/LowerFinger2
+        weight: 1
+      - path: Armature/UpperArm/LowerArm/UpperFinger2/LowerFinger2/LowerFinger2_end
+        weight: 1
+      - path: Armature/UpperArm/LowerArm/UpperFinger3
+        weight: 1
+      - path: Armature/UpperArm/LowerArm/UpperFinger3/LowerFinger3
+        weight: 1
+      - path: Armature/UpperArm/LowerArm/UpperFinger3/LowerFinger3/LowerFinger3_end
+        weight: 1
+      - path: Armature/UpperArm/LowerArm/UpperFinger4
+        weight: 1
+      - path: Armature/UpperArm/LowerArm/UpperFinger4/LowerFinger4
+        weight: 1
+      - path: Armature/UpperArm/LowerArm/UpperFinger4/LowerFinger4/LowerFinger4_end
+        weight: 1
+      - path: Armature/UpperLeftLeg
+        weight: 1
+      - path: Armature/UpperLeftLeg/LowerLeftLeg
+        weight: 1
+      - path: Armature/UpperLeftLeg/LowerLeftLeg/LeftFoot
+        weight: 1
+      - path: Armature/UpperLeftLeg/LowerLeftLeg/LeftFoot/LeftFoot_end
+        weight: 1
+      - path: Armature/UpperRightLeg
+        weight: 1
+      - path: Armature/UpperRightLeg/LowerRightLeg
+        weight: 1
+      - path: Armature/UpperRightLeg/LowerRightLeg/RightFoot
+        weight: 1
+      - path: Armature/UpperRightLeg/LowerRightLeg/RightFoot/RightFoot_end
+        weight: 1
+      - path: med
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Idle
+      takeName: Armature|Idle
+      firstFrame: 0
+      lastFrame: 41
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/Bone
+        weight: 1
+      - path: Armature/Bone/Bone_end
+        weight: 1
+      - path: Armature/UpperArm
+        weight: 1
+      - path: Armature/UpperArm/LowerArm
+        weight: 1
+      - path: Armature/UpperArm/LowerArm/UpperFinger1
+        weight: 1
+      - path: Armature/UpperArm/LowerArm/UpperFinger1/LowerFinger1
+        weight: 1
+      - path: Armature/UpperArm/LowerArm/UpperFinger1/LowerFinger1/LowerFinger1_end
+        weight: 1
+      - path: Armature/UpperArm/LowerArm/UpperFinger2
+        weight: 1
+      - path: Armature/UpperArm/LowerArm/UpperFinger2/LowerFinger2
+        weight: 1
+      - path: Armature/UpperArm/LowerArm/UpperFinger2/LowerFinger2/LowerFinger2_end
+        weight: 1
+      - path: Armature/UpperArm/LowerArm/UpperFinger3
+        weight: 1
+      - path: Armature/UpperArm/LowerArm/UpperFinger3/LowerFinger3
+        weight: 1
+      - path: Armature/UpperArm/LowerArm/UpperFinger3/LowerFinger3/LowerFinger3_end
+        weight: 1
+      - path: Armature/UpperArm/LowerArm/UpperFinger4
+        weight: 1
+      - path: Armature/UpperArm/LowerArm/UpperFinger4/LowerFinger4
+        weight: 1
+      - path: Armature/UpperArm/LowerArm/UpperFinger4/LowerFinger4/LowerFinger4_end
+        weight: 1
+      - path: Armature/UpperLeftLeg
+        weight: 1
+      - path: Armature/UpperLeftLeg/LowerLeftLeg
+        weight: 1
+      - path: Armature/UpperLeftLeg/LowerLeftLeg/LeftFoot
+        weight: 1
+      - path: Armature/UpperLeftLeg/LowerLeftLeg/LeftFoot/LeftFoot_end
+        weight: 1
+      - path: Armature/UpperRightLeg
+        weight: 1
+      - path: Armature/UpperRightLeg/LowerRightLeg
+        weight: 1
+      - path: Armature/UpperRightLeg/LowerRightLeg/RightFoot
+        weight: 1
+      - path: Armature/UpperRightLeg/LowerRightLeg/RightFoot/RightFoot_end
+        weight: 1
+      - path: med
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Run
+      takeName: Armature|Run
+      firstFrame: 0
+      lastFrame: 43
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/Bone
+        weight: 1
+      - path: Armature/Bone/Bone_end
+        weight: 1
+      - path: Armature/UpperArm
+        weight: 1
+      - path: Armature/UpperArm/LowerArm
+        weight: 1
+      - path: Armature/UpperArm/LowerArm/UpperFinger1
+        weight: 1
+      - path: Armature/UpperArm/LowerArm/UpperFinger1/LowerFinger1
+        weight: 1
+      - path: Armature/UpperArm/LowerArm/UpperFinger1/LowerFinger1/LowerFinger1_end
+        weight: 1
+      - path: Armature/UpperArm/LowerArm/UpperFinger2
+        weight: 1
+      - path: Armature/UpperArm/LowerArm/UpperFinger2/LowerFinger2
+        weight: 1
+      - path: Armature/UpperArm/LowerArm/UpperFinger2/LowerFinger2/LowerFinger2_end
+        weight: 1
+      - path: Armature/UpperArm/LowerArm/UpperFinger3
+        weight: 1
+      - path: Armature/UpperArm/LowerArm/UpperFinger3/LowerFinger3
+        weight: 1
+      - path: Armature/UpperArm/LowerArm/UpperFinger3/LowerFinger3/LowerFinger3_end
+        weight: 1
+      - path: Armature/UpperArm/LowerArm/UpperFinger4
+        weight: 1
+      - path: Armature/UpperArm/LowerArm/UpperFinger4/LowerFinger4
+        weight: 1
+      - path: Armature/UpperArm/LowerArm/UpperFinger4/LowerFinger4/LowerFinger4_end
+        weight: 1
+      - path: Armature/UpperLeftLeg
+        weight: 1
+      - path: Armature/UpperLeftLeg/LowerLeftLeg
+        weight: 1
+      - path: Armature/UpperLeftLeg/LowerLeftLeg/LeftFoot
+        weight: 1
+      - path: Armature/UpperLeftLeg/LowerLeftLeg/LeftFoot/LeftFoot_end
+        weight: 1
+      - path: Armature/UpperRightLeg
+        weight: 1
+      - path: Armature/UpperRightLeg/LowerRightLeg
+        weight: 1
+      - path: Armature/UpperRightLeg/LowerRightLeg/RightFoot
+        weight: 1
+      - path: Armature/UpperRightLeg/LowerRightLeg/RightFoot/RightFoot_end
+        weight: 1
+      - path: med
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: DONTUSE
+      takeName: med|Idle
+      firstFrame: 0
+      lastFrame: 41
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/Bone
+        weight: 1
+      - path: Armature/Bone/Bone_end
+        weight: 1
+      - path: Armature/UpperArm
+        weight: 1
+      - path: Armature/UpperArm/LowerArm
+        weight: 1
+      - path: Armature/UpperArm/LowerArm/UpperFinger1
+        weight: 1
+      - path: Armature/UpperArm/LowerArm/UpperFinger1/LowerFinger1
+        weight: 1
+      - path: Armature/UpperArm/LowerArm/UpperFinger1/LowerFinger1/LowerFinger1_end
+        weight: 1
+      - path: Armature/UpperArm/LowerArm/UpperFinger2
+        weight: 1
+      - path: Armature/UpperArm/LowerArm/UpperFinger2/LowerFinger2
+        weight: 1
+      - path: Armature/UpperArm/LowerArm/UpperFinger2/LowerFinger2/LowerFinger2_end
+        weight: 1
+      - path: Armature/UpperArm/LowerArm/UpperFinger3
+        weight: 1
+      - path: Armature/UpperArm/LowerArm/UpperFinger3/LowerFinger3
+        weight: 1
+      - path: Armature/UpperArm/LowerArm/UpperFinger3/LowerFinger3/LowerFinger3_end
+        weight: 1
+      - path: Armature/UpperArm/LowerArm/UpperFinger4
+        weight: 1
+      - path: Armature/UpperArm/LowerArm/UpperFinger4/LowerFinger4
+        weight: 1
+      - path: Armature/UpperArm/LowerArm/UpperFinger4/LowerFinger4/LowerFinger4_end
+        weight: 1
+      - path: Armature/UpperLeftLeg
+        weight: 1
+      - path: Armature/UpperLeftLeg/LowerLeftLeg
+        weight: 1
+      - path: Armature/UpperLeftLeg/LowerLeftLeg/LeftFoot
+        weight: 1
+      - path: Armature/UpperLeftLeg/LowerLeftLeg/LeftFoot/LeftFoot_end
+        weight: 1
+      - path: Armature/UpperRightLeg
+        weight: 1
+      - path: Armature/UpperRightLeg/LowerRightLeg
+        weight: 1
+      - path: Armature/UpperRightLeg/LowerRightLeg/RightFoot
+        weight: 1
+      - path: Armature/UpperRightLeg/LowerRightLeg/RightFoot/RightFoot_end
+        weight: 1
+      - path: med
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
