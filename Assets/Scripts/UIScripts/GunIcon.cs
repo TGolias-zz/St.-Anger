@@ -8,7 +8,7 @@ public class GunIcon : MonoBehaviour {
 	
 	// Use this for initialization
 	void Start () {
-		myText.enabled = false;
+		myText.enabled = true;
 	}
 	
 	// Update is called once per frame

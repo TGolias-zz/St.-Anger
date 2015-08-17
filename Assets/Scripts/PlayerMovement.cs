@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class PlayerMovement : MonoBehaviour 
+public class PlayerMovement : AbstractMovement 
 {
 	public float WalkSpeed = 2.5f;
 	public float RunSpeed = 6f;
@@ -77,8 +77,10 @@ public class PlayerMovement : MonoBehaviour
 				}
 			}
 		}
+		UIController.Instance.SetStamina(Stamina);
 		
 		isMoving &= !MoveLocked; 
+		isMakingSound = isMoving;
 		AnimationManagement(h, v, isMoving);
 		MovementManagement(h, v, isMoving);
 	}
@@ -87,8 +89,16 @@ public class PlayerMovement : MonoBehaviour
 	{
 		anim.SetBool(AnimationIDs.IS_WALKING, isMoving && !sprintButton);
 		anim.SetBool(AnimationIDs.IS_SPRINTING, isMoving && sprintButton);
-		anim.SetFloat(AnimationIDs.FLOAT_VERTICAL, isAiming ? v : 1f);
-		anim.SetFloat(AnimationIDs.FLOAT_HORIZONTAL, isAiming ? h : 0f);
+		if(isAiming)
+		{
+			anim.SetFloat(AnimationIDs.FLOAT_VERTICAL, Mathf.Lerp(anim.GetFloat(AnimationIDs.FLOAT_VERTICAL), v, SpeedDamping * Time.fixedDeltaTime));
+			anim.SetFloat(AnimationIDs.FLOAT_HORIZONTAL, Mathf.Lerp(anim.GetFloat(AnimationIDs.FLOAT_VERTICAL), h, SpeedDamping * Time.fixedDeltaTime));
+		}
+		else
+		{
+			anim.SetFloat(AnimationIDs.FLOAT_VERTICAL, 1f);
+			anim.SetFloat(AnimationIDs.FLOAT_HORIZONTAL, 0f);
+		}
 	}
 	
 	private void MovementManagement(float h, float v, bool isMoving)

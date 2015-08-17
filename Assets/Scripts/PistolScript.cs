@@ -4,6 +4,11 @@ using System.Collections;
 public class PistolScript : MonoBehaviour, ItemScript {
 
 	public int Damage = 10;
+	
+	private int CurrentlyLoadedAmmo = 0;
+	private const int AMMOCAPACITY = 3;
+	private int CurrentlyUnloadedAmmo = 10;
+	private const int MAXCAPACITY = 24;
 
 	private Animator anim;
 	private Transform tipOfGun;
@@ -33,24 +38,38 @@ public class PistolScript : MonoBehaviour, ItemScript {
 	{
 		if(playerIsAiming)
 		{
-			gunFire.Stop();
-			gunFire.Play();
-			anim.SetTrigger(AnimationIDs.GUNISSHOT);
-			shootRay.origin = tipOfGun.position;
-			shootRay.direction = tipOfGun.forward;
-			if(Physics.Raycast(shootRay, out shootHit, 100f))
+			if(CurrentlyLoadedAmmo > 0)
 			{
-				Collider hitCollider = shootHit.collider;
-				AbstractHealth health = hitCollider.GetComponentInParent<AbstractHealth>();
-				if(health != null)
+				CurrentlyLoadedAmmo--;
+				UIController.Instance.OnAmmoFired();
+				gunFire.Stop();
+				gunFire.Play();
+				
+				shootRay.origin = tipOfGun.position;
+				shootRay.direction = tipOfGun.forward;
+				if(Physics.Raycast(shootRay, out shootHit, 100f))
 				{
-					health.TakeDamage(Damage, hitCollider.CompareTag(Tags.WEAKPOINT));
+					Collider hitCollider = shootHit.collider;
+					AbstractHealth health = hitCollider.GetComponentInParent<AbstractHealth>();
+					if(health != null)
+					{
+						health.TakeDamage(Damage, hitCollider.CompareTag(Tags.WEAKPOINT), shootHit.point, tipOfGun);
+					}
 				}
 			}
+			anim.SetTrigger(AnimationIDs.GUNISSHOT);
 		}
 		else
 		{
-			//Reload the gun... This will be written later.
+			// Reload the gun... This will be written later.
+			// WE NEED TO DO A LOAD THE GUN ANIMATION HERE.
+			if(CurrentlyLoadedAmmo < AMMOCAPACITY && CurrentlyUnloadedAmmo > 0)
+			{
+				int loadAmount = Mathf.Min(AMMOCAPACITY - CurrentlyLoadedAmmo, CurrentlyUnloadedAmmo);
+				CurrentlyLoadedAmmo += loadAmount;
+				CurrentlyUnloadedAmmo -= loadAmount;
+				UIController.Instance.OnAmmoLoad(loadAmount);
+			}
 		}
 		return true;
 	} 

@@ -1,8 +1,9 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
-public class PlayerItemUse : MonoBehaviour {
-
+public class PlayerItemUse : MonoBehaviour 
+{
 	public GameObject currentItem;
 	public ItemScript currentItemScript;
 

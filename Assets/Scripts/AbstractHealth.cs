@@ -11,12 +11,26 @@ public abstract class AbstractHealth : MonoBehaviour
 	
 	void Awake()
 	{
+		initialize();
+	}
+	
+	protected virtual void initialize()
+	{
 		CurrentHealth = MaxHealth;
 		anim = GetComponent<Animator>();
 	}
 	
-	public virtual void TakeDamage(int damage, bool isCritical)
+	public virtual void TakeDamage(int damage, bool isCritical, Vector3 hitPoint, Transform hitFrom)
 	{
 		CurrentHealth -= isCritical ? damage * CriticalModifier : damage;
+		if(CurrentHealth < 0)
+		{
+			CurrentHealth = 0;
+		}
+	}
+	
+	public bool IsDead()
+	{
+		return CurrentHealth <= 0;
 	}
 }

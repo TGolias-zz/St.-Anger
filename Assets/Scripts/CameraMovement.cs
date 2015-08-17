@@ -15,10 +15,12 @@ public class CameraMovement : MonoBehaviour
 	private float targetSensitivity;
 	private float targetDistance;
 	private Vector3 currentHeight;
+	private int restrictCameraMask;
 	private bool isAiming;
 	
 	void Awake()
 	{
+		restrictCameraMask = LayerMask.GetMask("RestrictCamera");
 		playerTransform = Cache.GetCachedGameObjectByTag(Tags.PLAYER).transform;
 		isAiming = false;
 		currentSensitivity = NormalSensitivity;
@@ -30,6 +32,11 @@ public class CameraMovement : MonoBehaviour
 	
 	private static readonly Vector3 aimHeight = new Vector3(0f, 1.5f, 0f);
 	private static readonly Vector3 normalHeight = new Vector3(0f, 1f, 0f);
+
+	private const float amountOffWall = 0.2f;
+	private const float overShoulderNumber = 0.35f;
+	Ray ray;
+	RaycastHit hit;
 	
 	void LateUpdate () 
 	{
@@ -38,13 +45,33 @@ public class CameraMovement : MonoBehaviour
 		float horizontal = Input.GetAxis("Mouse X") * currentSensitivity;
 		float vertical = -Input.GetAxis("Mouse Y") * currentSensitivity;
 		Vector3 eulerAngles = transform.eulerAngles;
-		float rotX = clampCamera(eulerAngles.x + vertical, 345, 65, 180);
+		float rotX = clampCamera(eulerAngles.x + vertical, 295, 85, 180);
 		float rotY = eulerAngles.y + horizontal;
 		
 		transform.rotation = Quaternion.Euler(rotX, rotY, 0f);
-		transform.position = playerTransform.position + currentHeight 
-							 - (transform.forward * currentDistance) 
-							 + (isAiming ? (playerTransform.right * 0.35f) : Vector3.zero);
+		
+		Vector3 originPoint = playerTransform.position + currentHeight;
+		
+		float cameraRight = 0f;
+		if(isAiming)
+		{
+			cameraRight = overShoulderNumber;
+			ray = new Ray(originPoint, playerTransform.right);
+			if(Physics.Raycast(ray, out hit, overShoulderNumber + amountOffWall, restrictCameraMask))
+			{
+				cameraRight = hit.distance - amountOffWall;
+			}
+		}
+		originPoint += playerTransform.right * cameraRight;
+		
+		ray = new Ray(originPoint, -transform.forward);
+		float cameraDistance = currentDistance;
+		if(Physics.Raycast(ray, out hit, cameraDistance + amountOffWall, restrictCameraMask))
+		{
+			cameraDistance = hit.distance - amountOffWall;
+		}
+		
+		transform.position = originPoint + (-transform.forward * cameraDistance);
 	}
 	
 	private void SmoothCamera()

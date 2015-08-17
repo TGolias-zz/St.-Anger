@@ -9,7 +9,7 @@ public class CrowbarIcon : MonoBehaviour {
 	
 	// Use this for initialization
 	void Start () {
-		myText.enabled = true;
+		myText.enabled = false;
 	}
 	
 	// Update is called once per frame
