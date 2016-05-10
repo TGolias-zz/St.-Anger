@@ -1,26 +1,16 @@
-﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/UIScripts/PistolAmmo.cs">
+﻿<Properties StartupItem="Assembly-CSharp.csproj">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/PistolScript.cs">
     <Files>
       <File FileName="Assets/Scripts/PlayerMovement.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/Cache.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/CameraMovement.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/SpirakusHealth.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/DestroyAfterTime.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/PistolScript.cs" Line="1" Column="1" />
-      <File FileName="Assets/SpirakusMovement.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/RemovePlayerMovelock.cs" Line="1" Column="1" />
-      <File FileName="Assets/PlayerHealth.cs" Line="1" Column="1" />
-      <File FileName="Assets/SpirakusArmScript.cs" Line="1" Column="1" />
-      <File FileName="Assets/EntitySeen.cs" Line="1" Column="1" />
-      <File FileName="Assets/EntityInAttackRange.cs" Line="1" Column="1" />
-      <File FileName="Assets/AbstractMovement.cs" Line="1" Column="1" />
-      <File FileName="Assets/UIController.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/UIScripts/Bar.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/CrowbarScript.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/PistolScript.cs" Line="113" Column="25" />
+      <File FileName="Assets/Scripts/UIScripts/Ammo.cs" Line="1" Column="1" />
+      <File FileName="Assets/FlashLightScript.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/UIController.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/PlayerItemUse.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/ItemScript.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/UIScripts/PistolAmmo.cs" Line="32" Column="29" />
-      <File FileName="Assets/Scripts/UIScripts/CrowbarAmmo.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/AnimationIDs.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: dc8a98cff0a6f4516a48c50c1343ce0c
-timeCreated: 1439403248
+timeCreated: 1439947690
 licenseType: Free
 ModelImporter:
   serializedVersion: 18
@@ -187,7 +187,7 @@ ModelImporter:
     400176: Carl:TongueBack
     400178: Carl:TongueTip
     400180: //RootNode
-    7400000: mixamo.com
+    7400000: Melee
     9500000: //RootNode
   materials:
     importMaterials: 1
@@ -199,7 +199,12 @@ ModelImporter:
     optimizeGameObjects: 0
     motionNodeName: 
     animationImportErrors: 
-    animationImportWarnings: 
+    animationImportWarnings: 'MuscleClip ''Melee'' conversion warning: ''Carl:Hips/Carl:Spine/Carl:Spine1/Carl:Spine2''
+      is between humanoid transforms and has rotation animation. This might lower
+      retargeting quality.
+
+
+'
     animationRetargetingWarnings: 
     animationDoRetargetingWarnings: 0
     animationCompression: 3
@@ -208,7 +213,215 @@ ModelImporter:
     animationScaleError: .5
     animationWrapMode: 0
     extraExposedTransformPaths: []
-    clipAnimations: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Melee
+      takeName: mixamo.com
+      firstFrame: 27
+      lastFrame: 60
+      wrapMode: 0
+      orientationOffsetY: -50
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 1
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Carl:Hips
+        weight: 1
+      - path: Carl:Hips/Carl:LeftUpLeg
+        weight: 1
+      - path: Carl:Hips/Carl:LeftUpLeg/Carl:LeftLeg
+        weight: 1
+      - path: Carl:Hips/Carl:LeftUpLeg/Carl:LeftLeg/Carl:LeftFoot
+        weight: 1
+      - path: Carl:Hips/Carl:LeftUpLeg/Carl:LeftLeg/Carl:LeftFoot/Carl:LeftToeBase
+        weight: 1
+      - path: Carl:Hips/Carl:LeftUpLeg/Carl:LeftLeg/Carl:LeftFoot/Carl:LeftToeBase/Carl:LeftFootToeBase_End
+        weight: 0
+      - path: Carl:Hips/Carl:RightUpLeg
+        weight: 1
+      - path: Carl:Hips/Carl:RightUpLeg/Carl:RightLeg
+        weight: 1
+      - path: Carl:Hips/Carl:RightUpLeg/Carl:RightLeg/Carl:RightFoot
+        weight: 1
+      - path: Carl:Hips/Carl:RightUpLeg/Carl:RightLeg/Carl:RightFoot/Carl:RightToeBase
+        weight: 1
+      - path: Carl:Hips/Carl:RightUpLeg/Carl:RightLeg/Carl:RightFoot/Carl:RightToeBase/Carl:RightFootToeBase_End
+        weight: 0
+      - path: Carl:Hips/Carl:Spine
+        weight: 1
+      - path: Carl:Hips/Carl:Spine/Carl:Spine1
+        weight: 1
+      - path: Carl:Hips/Carl:Spine/Carl:Spine1/Carl:Spine2
+        weight: 1
+      - path: Carl:Hips/Carl:Spine/Carl:Spine1/Carl:Spine2/Carl:LeftShoulder
+        weight: 1
+      - path: Carl:Hips/Carl:Spine/Carl:Spine1/Carl:Spine2/Carl:LeftShoulder/Carl:LeftArm
+        weight: 1
+      - path: Carl:Hips/Carl:Spine/Carl:Spine1/Carl:Spine2/Carl:LeftShoulder/Carl:LeftArm/Carl:LeftForeArm
+        weight: 1
+      - path: Carl:Hips/Carl:Spine/Carl:Spine1/Carl:Spine2/Carl:LeftShoulder/Carl:LeftArm/Carl:LeftForeArm/Carl:LeftHand
+        weight: 1
+      - path: Carl:Hips/Carl:Spine/Carl:Spine1/Carl:Spine2/Carl:LeftShoulder/Carl:LeftArm/Carl:LeftForeArm/Carl:LeftHand/Carl:LeftHandIndex1
+        weight: 1
+      - path: Carl:Hips/Carl:Spine/Carl:Spine1/Carl:Spine2/Carl:LeftShoulder/Carl:LeftArm/Carl:LeftForeArm/Carl:LeftHand/Carl:LeftHandIndex1/Carl:LeftHandIndex2
+        weight: 1
+      - path: Carl:Hips/Carl:Spine/Carl:Spine1/Carl:Spine2/Carl:LeftShoulder/Carl:LeftArm/Carl:LeftForeArm/Carl:LeftHand/Carl:LeftHandIndex1/Carl:LeftHandIndex2/Carl:LeftHandIndex3
+        weight: 1
+      - path: Carl:Hips/Carl:Spine/Carl:Spine1/Carl:Spine2/Carl:LeftShoulder/Carl:LeftArm/Carl:LeftForeArm/Carl:LeftHand/Carl:LeftHandIndex1/Carl:LeftHandIndex2/Carl:LeftHandIndex3/Carl:LeftHandIndex4
+        weight: 0
+      - path: Carl:Hips/Carl:Spine/Carl:Spine1/Carl:Spine2/Carl:LeftShoulder/Carl:LeftArm/Carl:LeftForeArm/Carl:LeftHand/Carl:LeftHandMiddle1
+        weight: 1
+      - path: Carl:Hips/Carl:Spine/Carl:Spine1/Carl:Spine2/Carl:LeftShoulder/Carl:LeftArm/Carl:LeftForeArm/Carl:LeftHand/Carl:LeftHandMiddle1/Carl:LeftHandMiddle2
+        weight: 1
+      - path: Carl:Hips/Carl:Spine/Carl:Spine1/Carl:Spine2/Carl:LeftShoulder/Carl:LeftArm/Carl:LeftForeArm/Carl:LeftHand/Carl:LeftHandMiddle1/Carl:LeftHandMiddle2/Carl:LeftHandMiddle3
+        weight: 1
+      - path: Carl:Hips/Carl:Spine/Carl:Spine1/Carl:Spine2/Carl:LeftShoulder/Carl:LeftArm/Carl:LeftForeArm/Carl:LeftHand/Carl:LeftHandMiddle1/Carl:LeftHandMiddle2/Carl:LeftHandMiddle3/Carl:LeftHandMiddle4
+        weight: 0
+      - path: Carl:Hips/Carl:Spine/Carl:Spine1/Carl:Spine2/Carl:LeftShoulder/Carl:LeftArm/Carl:LeftForeArm/Carl:LeftHand/Carl:LeftHandPinky1
+        weight: 1
+      - path: Carl:Hips/Carl:Spine/Carl:Spine1/Carl:Spine2/Carl:LeftShoulder/Carl:LeftArm/Carl:LeftForeArm/Carl:LeftHand/Carl:LeftHandPinky1/Carl:LeftHandPinky2
+        weight: 1
+      - path: Carl:Hips/Carl:Spine/Carl:Spine1/Carl:Spine2/Carl:LeftShoulder/Carl:LeftArm/Carl:LeftForeArm/Carl:LeftHand/Carl:LeftHandPinky1/Carl:LeftHandPinky2/Carl:LeftHandPinky3
+        weight: 1
+      - path: Carl:Hips/Carl:Spine/Carl:Spine1/Carl:Spine2/Carl:LeftShoulder/Carl:LeftArm/Carl:LeftForeArm/Carl:LeftHand/Carl:LeftHandPinky1/Carl:LeftHandPinky2/Carl:LeftHandPinky3/Carl:LeftHandPinky4
+        weight: 0
+      - path: Carl:Hips/Carl:Spine/Carl:Spine1/Carl:Spine2/Carl:LeftShoulder/Carl:LeftArm/Carl:LeftForeArm/Carl:LeftHand/Carl:LeftHandRing1
+        weight: 1
+      - path: Carl:Hips/Carl:Spine/Carl:Spine1/Carl:Spine2/Carl:LeftShoulder/Carl:LeftArm/Carl:LeftForeArm/Carl:LeftHand/Carl:LeftHandRing1/Carl:LeftHandRing2
+        weight: 1
+      - path: Carl:Hips/Carl:Spine/Carl:Spine1/Carl:Spine2/Carl:LeftShoulder/Carl:LeftArm/Carl:LeftForeArm/Carl:LeftHand/Carl:LeftHandRing1/Carl:LeftHandRing2/Carl:LeftHandRing3
+        weight: 1
+      - path: Carl:Hips/Carl:Spine/Carl:Spine1/Carl:Spine2/Carl:LeftShoulder/Carl:LeftArm/Carl:LeftForeArm/Carl:LeftHand/Carl:LeftHandRing1/Carl:LeftHandRing2/Carl:LeftHandRing3/Carl:LeftHandRing4
+        weight: 0
+      - path: Carl:Hips/Carl:Spine/Carl:Spine1/Carl:Spine2/Carl:LeftShoulder/Carl:LeftArm/Carl:LeftForeArm/Carl:LeftHand/Carl:LeftHandThumb1
+        weight: 1
+      - path: Carl:Hips/Carl:Spine/Carl:Spine1/Carl:Spine2/Carl:LeftShoulder/Carl:LeftArm/Carl:LeftForeArm/Carl:LeftHand/Carl:LeftHandThumb1/Carl:LeftHandThumb2
+        weight: 1
+      - path: Carl:Hips/Carl:Spine/Carl:Spine1/Carl:Spine2/Carl:LeftShoulder/Carl:LeftArm/Carl:LeftForeArm/Carl:LeftHand/Carl:LeftHandThumb1/Carl:LeftHandThumb2/Carl:LeftHandThumb3
+        weight: 1
+      - path: Carl:Hips/Carl:Spine/Carl:Spine1/Carl:Spine2/Carl:LeftShoulder/Carl:LeftArm/Carl:LeftForeArm/Carl:LeftHand/Carl:LeftHandThumb1/Carl:LeftHandThumb2/Carl:LeftHandThumb3/Carl:LeftHandThumb4
+        weight: 0
+      - path: Carl:Hips/Carl:Spine/Carl:Spine1/Carl:Spine2/Carl:Neck
+        weight: 1
+      - path: Carl:Hips/Carl:Spine/Carl:Spine1/Carl:Spine2/Carl:Neck/Carl:Neck1
+        weight: 1
+      - path: Carl:Hips/Carl:Spine/Carl:Spine1/Carl:Spine2/Carl:Neck/Carl:Neck1/Carl:Head
+        weight: 1
+      - path: Carl:Hips/Carl:Spine/Carl:Spine1/Carl:Spine2/Carl:Neck/Carl:Neck1/Carl:Head/Carl:HeadTop_End
+        weight: 0
+      - path: Carl:Hips/Carl:Spine/Carl:Spine1/Carl:Spine2/Carl:Neck/Carl:Neck1/Carl:Head/Carl:Jaw
+        weight: 1
+      - path: Carl:Hips/Carl:Spine/Carl:Spine1/Carl:Spine2/Carl:Neck/Carl:Neck1/Carl:Head/Carl:Jaw/Carl:JawEND
+        weight: 0
+      - path: Carl:Hips/Carl:Spine/Carl:Spine1/Carl:Spine2/Carl:Neck/Carl:Neck1/Carl:Head/Carl:Jaw/Carl:LeftLipCorner
+        weight: 0
+      - path: Carl:Hips/Carl:Spine/Carl:Spine1/Carl:Spine2/Carl:Neck/Carl:Neck1/Carl:Head/Carl:Jaw/Carl:LeftLipLower
+        weight: 0
+      - path: Carl:Hips/Carl:Spine/Carl:Spine1/Carl:Spine2/Carl:Neck/Carl:Neck1/Carl:Head/Carl:Jaw/Carl:RightLipCorner
+        weight: 0
+      - path: Carl:Hips/Carl:Spine/Carl:Spine1/Carl:Spine2/Carl:Neck/Carl:Neck1/Carl:Head/Carl:Jaw/Carl:RightLipLower
+        weight: 0
+      - path: Carl:Hips/Carl:Spine/Carl:Spine1/Carl:Spine2/Carl:Neck/Carl:Neck1/Carl:Head/Carl:Jaw/Carl:TongueBack
+        weight: 0
+      - path: Carl:Hips/Carl:Spine/Carl:Spine1/Carl:Spine2/Carl:Neck/Carl:Neck1/Carl:Head/Carl:Jaw/Carl:TongueTip
+        weight: 0
+      - path: Carl:Hips/Carl:Spine/Carl:Spine1/Carl:Spine2/Carl:Neck/Carl:Neck1/Carl:Head/Carl:LeftCheek
+        weight: 0
+      - path: Carl:Hips/Carl:Spine/Carl:Spine1/Carl:Spine2/Carl:Neck/Carl:Neck1/Carl:Head/Carl:LeftEye
+        weight: 1
+      - path: Carl:Hips/Carl:Spine/Carl:Spine1/Carl:Spine2/Carl:Neck/Carl:Neck1/Carl:Head/Carl:LeftEyelidLower
+        weight: 0
+      - path: Carl:Hips/Carl:Spine/Carl:Spine1/Carl:Spine2/Carl:Neck/Carl:Neck1/Carl:Head/Carl:LeftEyelidUpper
+        weight: 0
+      - path: Carl:Hips/Carl:Spine/Carl:Spine1/Carl:Spine2/Carl:Neck/Carl:Neck1/Carl:Head/Carl:LeftInnerBrow
+        weight: 0
+      - path: Carl:Hips/Carl:Spine/Carl:Spine1/Carl:Spine2/Carl:Neck/Carl:Neck1/Carl:Head/Carl:LeftIOuterBrow
+        weight: 0
+      - path: Carl:Hips/Carl:Spine/Carl:Spine1/Carl:Spine2/Carl:Neck/Carl:Neck1/Carl:Head/Carl:LeftLipUpper
+        weight: 0
+      - path: Carl:Hips/Carl:Spine/Carl:Spine1/Carl:Spine2/Carl:Neck/Carl:Neck1/Carl:Head/Carl:LeftNostril
+        weight: 0
+      - path: Carl:Hips/Carl:Spine/Carl:Spine1/Carl:Spine2/Carl:Neck/Carl:Neck1/Carl:Head/Carl:RightCheek
+        weight: 0
+      - path: Carl:Hips/Carl:Spine/Carl:Spine1/Carl:Spine2/Carl:Neck/Carl:Neck1/Carl:Head/Carl:RightEye
+        weight: 1
+      - path: Carl:Hips/Carl:Spine/Carl:Spine1/Carl:Spine2/Carl:Neck/Carl:Neck1/Carl:Head/Carl:RightEyelidLower
+        weight: 0
+      - path: Carl:Hips/Carl:Spine/Carl:Spine1/Carl:Spine2/Carl:Neck/Carl:Neck1/Carl:Head/Carl:RightEyelidUpper
+        weight: 0
+      - path: Carl:Hips/Carl:Spine/Carl:Spine1/Carl:Spine2/Carl:Neck/Carl:Neck1/Carl:Head/Carl:RightInnerBrow
+        weight: 0
+      - path: Carl:Hips/Carl:Spine/Carl:Spine1/Carl:Spine2/Carl:Neck/Carl:Neck1/Carl:Head/Carl:RightIOuterBrow
+        weight: 0
+      - path: Carl:Hips/Carl:Spine/Carl:Spine1/Carl:Spine2/Carl:Neck/Carl:Neck1/Carl:Head/Carl:RightLipUpper
+        weight: 0
+      - path: Carl:Hips/Carl:Spine/Carl:Spine1/Carl:Spine2/Carl:Neck/Carl:Neck1/Carl:Head/Carl:RightNostril
+        weight: 0
+      - path: Carl:Hips/Carl:Spine/Carl:Spine1/Carl:Spine2/Carl:RightShoulder
+        weight: 1
+      - path: Carl:Hips/Carl:Spine/Carl:Spine1/Carl:Spine2/Carl:RightShoulder/Carl:RightArm
+        weight: 1
+      - path: Carl:Hips/Carl:Spine/Carl:Spine1/Carl:Spine2/Carl:RightShoulder/Carl:RightArm/Carl:RightForeArm
+        weight: 1
+      - path: Carl:Hips/Carl:Spine/Carl:Spine1/Carl:Spine2/Carl:RightShoulder/Carl:RightArm/Carl:RightForeArm/Carl:RightHand
+        weight: 1
+      - path: Carl:Hips/Carl:Spine/Carl:Spine1/Carl:Spine2/Carl:RightShoulder/Carl:RightArm/Carl:RightForeArm/Carl:RightHand/Carl:RightHandIndex1
+        weight: 1
+      - path: Carl:Hips/Carl:Spine/Carl:Spine1/Carl:Spine2/Carl:RightShoulder/Carl:RightArm/Carl:RightForeArm/Carl:RightHand/Carl:RightHandIndex1/Carl:RightHandIndex2
+        weight: 1
+      - path: Carl:Hips/Carl:Spine/Carl:Spine1/Carl:Spine2/Carl:RightShoulder/Carl:RightArm/Carl:RightForeArm/Carl:RightHand/Carl:RightHandIndex1/Carl:RightHandIndex2/Carl:RightHandIndex3
+        weight: 1
+      - path: Carl:Hips/Carl:Spine/Carl:Spine1/Carl:Spine2/Carl:RightShoulder/Carl:RightArm/Carl:RightForeArm/Carl:RightHand/Carl:RightHandIndex1/Carl:RightHandIndex2/Carl:RightHandIndex3/Carl:RightHandIndex4
+        weight: 0
+      - path: Carl:Hips/Carl:Spine/Carl:Spine1/Carl:Spine2/Carl:RightShoulder/Carl:RightArm/Carl:RightForeArm/Carl:RightHand/Carl:RightHandMiddle1
+        weight: 1
+      - path: Carl:Hips/Carl:Spine/Carl:Spine1/Carl:Spine2/Carl:RightShoulder/Carl:RightArm/Carl:RightForeArm/Carl:RightHand/Carl:RightHandMiddle1/Carl:RightHandMiddle2
+        weight: 1
+      - path: Carl:Hips/Carl:Spine/Carl:Spine1/Carl:Spine2/Carl:RightShoulder/Carl:RightArm/Carl:RightForeArm/Carl:RightHand/Carl:RightHandMiddle1/Carl:RightHandMiddle2/Carl:RightHandMiddle3
+        weight: 1
+      - path: Carl:Hips/Carl:Spine/Carl:Spine1/Carl:Spine2/Carl:RightShoulder/Carl:RightArm/Carl:RightForeArm/Carl:RightHand/Carl:RightHandMiddle1/Carl:RightHandMiddle2/Carl:RightHandMiddle3/Carl:RightHandMiddle4
+        weight: 0
+      - path: Carl:Hips/Carl:Spine/Carl:Spine1/Carl:Spine2/Carl:RightShoulder/Carl:RightArm/Carl:RightForeArm/Carl:RightHand/Carl:RightHandPinky1
+        weight: 1
+      - path: Carl:Hips/Carl:Spine/Carl:Spine1/Carl:Spine2/Carl:RightShoulder/Carl:RightArm/Carl:RightForeArm/Carl:RightHand/Carl:RightHandPinky1/Carl:RightHandPinky2
+        weight: 1
+      - path: Carl:Hips/Carl:Spine/Carl:Spine1/Carl:Spine2/Carl:RightShoulder/Carl:RightArm/Carl:RightForeArm/Carl:RightHand/Carl:RightHandPinky1/Carl:RightHandPinky2/Carl:RightHandPinky3
+        weight: 1
+      - path: Carl:Hips/Carl:Spine/Carl:Spine1/Carl:Spine2/Carl:RightShoulder/Carl:RightArm/Carl:RightForeArm/Carl:RightHand/Carl:RightHandPinky1/Carl:RightHandPinky2/Carl:RightHandPinky3/Carl:RightHandPinky4
+        weight: 0
+      - path: Carl:Hips/Carl:Spine/Carl:Spine1/Carl:Spine2/Carl:RightShoulder/Carl:RightArm/Carl:RightForeArm/Carl:RightHand/Carl:RightHandRing1
+        weight: 1
+      - path: Carl:Hips/Carl:Spine/Carl:Spine1/Carl:Spine2/Carl:RightShoulder/Carl:RightArm/Carl:RightForeArm/Carl:RightHand/Carl:RightHandRing1/Carl:RightHandRing2
+        weight: 1
+      - path: Carl:Hips/Carl:Spine/Carl:Spine1/Carl:Spine2/Carl:RightShoulder/Carl:RightArm/Carl:RightForeArm/Carl:RightHand/Carl:RightHandRing1/Carl:RightHandRing2/Carl:RightHandRing3
+        weight: 1
+      - path: Carl:Hips/Carl:Spine/Carl:Spine1/Carl:Spine2/Carl:RightShoulder/Carl:RightArm/Carl:RightForeArm/Carl:RightHand/Carl:RightHandRing1/Carl:RightHandRing2/Carl:RightHandRing3/Carl:RightHandRing4
+        weight: 0
+      - path: Carl:Hips/Carl:Spine/Carl:Spine1/Carl:Spine2/Carl:RightShoulder/Carl:RightArm/Carl:RightForeArm/Carl:RightHand/Carl:RightHandThumb1
+        weight: 1
+      - path: Carl:Hips/Carl:Spine/Carl:Spine1/Carl:Spine2/Carl:RightShoulder/Carl:RightArm/Carl:RightForeArm/Carl:RightHand/Carl:RightHandThumb1/Carl:RightHandThumb2
+        weight: 1
+      - path: Carl:Hips/Carl:Spine/Carl:Spine1/Carl:Spine2/Carl:RightShoulder/Carl:RightArm/Carl:RightForeArm/Carl:RightHand/Carl:RightHandThumb1/Carl:RightHandThumb2/Carl:RightHandThumb3
+        weight: 1
+      - path: Carl:Hips/Carl:Spine/Carl:Spine1/Carl:Spine2/Carl:RightShoulder/Carl:RightArm/Carl:RightForeArm/Carl:RightHand/Carl:RightHandThumb1/Carl:RightHandThumb2/Carl:RightHandThumb3/Carl:RightHandThumb4
+        weight: 0
+      maskType: 0
+      maskSource: {instanceID: 0}
     isReadable: 1
   meshes:
     lODScreenPercentages: []
@@ -669,7 +882,7 @@ ModelImporter:
         length: 0
         modified: 0
     skeleton:
-    - name: Carl@sword_and_shield_slash(Clone)
+    - name: Melee(Clone)
       position: {x: 0, y: 0, z: 0}
       rotation: {x: 0, y: 0, z: 0, w: 1}
       scale: {x: 1, y: 1, z: 1}
@@ -680,8 +893,8 @@ ModelImporter:
       scale: {x: 1, y: 1, z: 1}
       transformModified: 1
     - name: Carl:LeftUpLeg
-      position: {x: -.0963379964, y: -.0327329971, z: 0}
-      rotation: {x: -.0126131605, y: 1.7451905e-06, z: 2.20141185e-08, w: .999920487}
+      position: {x: -.0963379964, y: -.0327330232, z: 0}
+      rotation: {x: -.0125627136, y: -.0893430114, z: -.00112698774, w: .995921075}
       scale: {x: 1, y: 1, z: 1}
       transformModified: 1
     - name: Carl:LeftLeg
@@ -856,7 +1069,7 @@ ModelImporter:
       transformModified: 1
     - name: Carl:LeftHandThumb3
       position: {x: -.0450179987, y: -.0134449992, z: .021782998}
-      rotation: {x: .0535233542, y: -.0453470349, z: .0826251879, w: .994108617}
+      rotation: {x: .053523358, y: -.0453470387, z: .0826251954, w: .994108677}
       scale: {x: 1, y: 1, z: 1}
       transformModified: 1
     - name: Carl:LeftHandThumb4

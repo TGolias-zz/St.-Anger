@@ -46,31 +46,34 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\AbstractMovement.cs" />
-     <Compile Include="Assets\EntityInAttackRange.cs" />
-     <Compile Include="Assets\EntityIsHeard.cs" />
-     <Compile Include="Assets\EntitySeen.cs" />
-     <Compile Include="Assets\PlayerHealth.cs" />
-     <Compile Include="Assets\RemoveSpirakusMoveLock.cs" />
+     <Compile Include="Assets\AddPlayerMovelock.cs" />
+     <Compile Include="Assets\PlayerAfterReload.cs" />
      <Compile Include="Assets\Scripts\AbstractHealth.cs" />
+     <Compile Include="Assets\Scripts\AbstractMovement.cs" />
      <Compile Include="Assets\Scripts\AnimationIDs.cs" />
      <Compile Include="Assets\Scripts\Cache.cs" />
      <Compile Include="Assets\Scripts\CameraMovement.cs" />
+     <Compile Include="Assets\Scripts\CrowbarDamageBox.cs" />
+     <Compile Include="Assets\Scripts\CrowbarScript.cs" />
      <Compile Include="Assets\Scripts\DestroyAfterTime.cs" />
+     <Compile Include="Assets\Scripts\EntityInAttackRange.cs" />
+     <Compile Include="Assets\Scripts\EntityIsHeard.cs" />
+     <Compile Include="Assets\Scripts\EntitySeen.cs" />
      <Compile Include="Assets\Scripts\ItemScript.cs" />
+     <Compile Include="Assets\Scripts\PickupScript.cs" />
      <Compile Include="Assets\Scripts\PistolScript.cs" />
+     <Compile Include="Assets\Scripts\PlayerHealth.cs" />
      <Compile Include="Assets\Scripts\PlayerItemUse.cs" />
      <Compile Include="Assets\Scripts\PlayerMovement.cs" />
      <Compile Include="Assets\Scripts\RemovePlayerMovelock.cs" />
+     <Compile Include="Assets\Scripts\RemoveSpirakusMoveLock.cs" />
+     <Compile Include="Assets\Scripts\SpirakusArmScript.cs" />
      <Compile Include="Assets\Scripts\SpirakusHealth.cs" />
+     <Compile Include="Assets\Scripts\SpirakusMovement.cs" />
      <Compile Include="Assets\Scripts\Tags.cs" />
+     <Compile Include="Assets\Scripts\UIController.cs" />
      <Compile Include="Assets\Scripts\UIScripts\Ammo.cs" />
      <Compile Include="Assets\Scripts\UIScripts\Bar.cs" />
-     <Compile Include="Assets\Scripts\UIScripts\CrowbarIcon.cs" />
-     <Compile Include="Assets\Scripts\UIScripts\GunIcon.cs" />
-     <Compile Include="Assets\SpirakusArmScript.cs" />
-     <Compile Include="Assets\SpirakusMovement.cs" />
-     <Compile Include="Assets\UIController.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>

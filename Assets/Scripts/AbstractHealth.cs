@@ -20,7 +20,7 @@ public abstract class AbstractHealth : MonoBehaviour
 		anim = GetComponent<Animator>();
 	}
 	
-	public virtual void TakeDamage(int damage, bool isCritical, Vector3 hitPoint, Transform hitFrom)
+	public virtual void TakeDamage(int damage, bool isCritical, Vector3 hitPoint, Vector3 hitForward, Transform attacker)
 	{
 		CurrentHealth -= isCritical ? damage * CriticalModifier : damage;
 		if(CurrentHealth < 0)

@@ -1,28 +1,36 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class PistolScript : MonoBehaviour, ItemScript {
-
+public class PistolScript : MonoBehaviour, ItemScript 
+{
 	public int Damage = 10;
+	public GameObject AmmoClip;
+	public GameObject Gunfire;
 	
-	private int CurrentlyLoadedAmmo = 0;
-	private const int AMMOCAPACITY = 3;
-	private int CurrentlyUnloadedAmmo = 10;
-	private const int MAXCAPACITY = 24;
+	public int CurrentlyLoadedAmmo = 0;
+	public int CurrentlyUnloadedAmmo = 14;
+	private const int AMMOCAPACITY = 6;
+	private const int MAXAMMO = 1500;
 
 	private Animator anim;
 	private Transform tipOfGun;
 	private LineRenderer laserPoint;
-	private ParticleSystem gunFire;
+	private Transform playerTransform;
+	private PlayerItemUse playerInventory;
 	
 	private bool playerIsAiming;
 
 	void Awake () 
 	{
 		anim = GetComponent<Animator>();
-		tipOfGun = transform.FindChild("LaserPoint");
+		tipOfGun = transform.FindChild("LaserPoint");	
 		laserPoint = tipOfGun.GetComponent<LineRenderer>();
-		gunFire = tipOfGun.GetComponentInChildren<ParticleSystem>();
+	}
+	
+	public void Init(Transform playerTransform)
+	{
+		this.playerTransform = playerTransform;
+		playerInventory = playerTransform.GetComponent<PlayerItemUse>();
 	}
 	
 	public void IsAiming(bool isAiming)
@@ -31,8 +39,12 @@ public class PistolScript : MonoBehaviour, ItemScript {
 		laserPoint.enabled = playerIsAiming;
 	}
 	
-	private Ray shootRay;
-	private RaycastHit shootHit;
+	public void UpdateWhenAiming()
+	{
+		Vector3 bulletOrigin = tipOfGun.transform.position;
+		laserPoint.SetPosition(0, tipOfGun.InverseTransformPoint(bulletOrigin));
+		laserPoint.SetPosition(1, tipOfGun.InverseTransformPoint(bulletOrigin + (tipOfGun.forward * 505f)));
+	}
 	
 	public bool UseItem()
 	{
@@ -42,18 +54,21 @@ public class PistolScript : MonoBehaviour, ItemScript {
 			{
 				CurrentlyLoadedAmmo--;
 				UIController.Instance.OnAmmoFired();
-				gunFire.Stop();
-				gunFire.Play();
+
+				GameObject gunFire = Instantiate(Gunfire, tipOfGun.position, tipOfGun.rotation) as GameObject;
+				gunFire.transform.SetParent(tipOfGun);
 				
+				Ray shootRay = new Ray();
+				RaycastHit shootHit;
 				shootRay.origin = tipOfGun.position;
 				shootRay.direction = tipOfGun.forward;
-				if(Physics.Raycast(shootRay, out shootHit, 100f))
+				if(Physics.Raycast(shootRay, out shootHit, 505f))
 				{
 					Collider hitCollider = shootHit.collider;
 					AbstractHealth health = hitCollider.GetComponentInParent<AbstractHealth>();
 					if(health != null)
 					{
-						health.TakeDamage(Damage, hitCollider.CompareTag(Tags.WEAKPOINT), shootHit.point, tipOfGun);
+						health.TakeDamage(Damage, hitCollider.CompareTag(Tags.WEAKPOINT), shootHit.point, shootRay.direction, playerTransform);
 					}
 				}
 			}
@@ -61,16 +76,53 @@ public class PistolScript : MonoBehaviour, ItemScript {
 		}
 		else
 		{
-			// Reload the gun... This will be written later.
-			// WE NEED TO DO A LOAD THE GUN ANIMATION HERE.
 			if(CurrentlyLoadedAmmo < AMMOCAPACITY && CurrentlyUnloadedAmmo > 0)
-			{
-				int loadAmount = Mathf.Min(AMMOCAPACITY - CurrentlyLoadedAmmo, CurrentlyUnloadedAmmo);
-				CurrentlyLoadedAmmo += loadAmount;
-				CurrentlyUnloadedAmmo -= loadAmount;
-				UIController.Instance.OnAmmoLoad(loadAmount);
+			{	
+				playerInventory.StartReload(AmmoClip);
 			}
 		}
 		return true;
-	} 
+	}
+	
+	public ItemType GetItemType()
+	{
+		return ItemType.pistol;
+	}
+	
+	public int GetCurrentlyLoadedAmmo()
+	{
+		return CurrentlyLoadedAmmo;
+	}
+	
+	public int GetCurrentlyUnloadedAmmo()
+	{
+		return CurrentlyUnloadedAmmo;
+	}
+	
+	public void AddSettingsFrom(ItemScript itemScript)
+	{
+		PistolScript pistolScript = itemScript as PistolScript;
+		if(pistolScript != null)
+		{
+			CurrentlyUnloadedAmmo += pistolScript.CurrentlyUnloadedAmmo + pistolScript.CurrentlyLoadedAmmo;
+			if(CurrentlyUnloadedAmmo > MAXAMMO)
+			{
+				CurrentlyUnloadedAmmo = MAXAMMO;
+			}
+		}
+		UIController.Instance.OnAmmoPickup(ItemType.pistol, CurrentlyUnloadedAmmo);
+	}
+	
+	public void OnReload()
+	{
+		int loadAmount = Mathf.Min(AMMOCAPACITY - CurrentlyLoadedAmmo, CurrentlyUnloadedAmmo);
+		CurrentlyLoadedAmmo += loadAmount;
+		CurrentlyUnloadedAmmo -= loadAmount;
+		UIController.Instance.OnAmmoLoad(loadAmount);
+	}
+
+	public bool KeepArmStiff()
+	{
+		return true;
+	}
 }

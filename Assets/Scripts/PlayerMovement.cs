@@ -9,6 +9,7 @@ public class PlayerMovement : AbstractMovement
 	public float RotationDamping = 20f;
 	public float MaxStamina = 5f;
 	public bool MoveLocked;
+	public bool ForceAim;
 	
 	private Animator anim;
 	private Rigidbody playerRigidbody;
@@ -29,13 +30,14 @@ public class PlayerMovement : AbstractMovement
 		cameraMovement = camera.GetComponent<CameraMovement>();
 		Stamina = MaxStamina;
 		MoveLocked = false;
+		ForceAim = false;
 		sprintButton = false;
 		isAiming = false;		
 	}
 	
 	void Update()
 	{
-		bool willAim = Input.GetButton("Aim") && !sprintButton && !MoveLocked;
+		bool willAim = Input.GetButton("Aim") && !sprintButton && (!MoveLocked || ForceAim);
 		if(isAiming != willAim)
 		{
 			isAiming = willAim;
@@ -78,6 +80,10 @@ public class PlayerMovement : AbstractMovement
 			}
 		}
 		UIController.Instance.SetStamina(Stamina);
+		if(MoveLocked || sprintButton)
+		{
+			playerItemUse.CancelReload();
+		}
 		
 		isMoving &= !MoveLocked; 
 		isMakingSound = isMoving;
@@ -143,5 +149,10 @@ public class PlayerMovement : AbstractMovement
 			movementVector.y = playerRigidbody.velocity.y;                                       
 			playerRigidbody.velocity = Vector3.Lerp(playerRigidbody.velocity, movementVector, SpeedDamping * Time.fixedDeltaTime);
 		}
+	}
+	
+	public bool IsSprinting()
+	{
+		return sprintButton;
 	}
 }
