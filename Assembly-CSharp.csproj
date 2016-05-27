@@ -59,6 +59,7 @@
      <Compile Include="Assets\Scripts\EntityInAttackRange.cs" />
      <Compile Include="Assets\Scripts\EntityIsHeard.cs" />
      <Compile Include="Assets\Scripts\EntitySeen.cs" />
+     <Compile Include="Assets\Scripts\InteractableObjects\DoorOpen.cs" />
      <Compile Include="Assets\Scripts\ItemScript.cs" />
      <Compile Include="Assets\Scripts\PickupScript.cs" />
      <Compile Include="Assets\Scripts\PistolScript.cs" />
