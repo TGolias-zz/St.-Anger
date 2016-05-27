@@ -31,8 +31,8 @@ public class AnimationIDs : MonoBehaviour
 	
 	void Awake()
 	{
-		Cursor.visible = false;
-		Cursor.lockState = CursorLockMode.Locked;
+		//Cursor.visible = false;
+		//Cursor.lockState = CursorLockMode.Locked;
 	
 		IS_WALKING = Animator.StringToHash("IsWalking");
 		IS_SPRINTING = Animator.StringToHash("IsSprinting");
