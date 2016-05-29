@@ -75,6 +75,7 @@
      <Compile Include="Assets\Scripts\UIController.cs" />
      <Compile Include="Assets\Scripts\UIScripts\Ammo.cs" />
      <Compile Include="Assets\Scripts\UIScripts\Bar.cs" />
+     <Compile Include="Assets\Scripts\UIScripts\InteractionInstruction.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
