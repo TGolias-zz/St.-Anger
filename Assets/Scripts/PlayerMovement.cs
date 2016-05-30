@@ -32,6 +32,7 @@ public class PlayerMovement : AbstractMovement
 		MoveLocked = false;
 		ForceAim = false;
 		sprintButton = false;
+		isAiming = false;
 	}
 	
 	void Update()
@@ -52,7 +53,9 @@ public class PlayerMovement : AbstractMovement
 		bool isMoving = h != 0 || v != 0;
 		sprintButton = Input.GetButton("Sprint");
 		
+		if((sprintButton && isMoving && !MoveLocked))
 		{
+			ExpendStamina(Time.fixedDeltaTime);
 		}
 		else
 		{
