@@ -4,6 +4,7 @@ using System.Collections;
 public class PlayerHealth : AbstractHealth 
 {
 	public GameObject bloodSpray;
+	public float StaminaLoss = 1.0f;
 	
 	private PlayerMovement playerMovement;
 	private Transform armature;
@@ -28,6 +29,7 @@ public class PlayerHealth : AbstractHealth
 			}
 			else
 			{
+				playerMovement.ExpendStamina(StaminaLoss);
 				if(!playerMovement.MoveLocked || playerMovement.ForceAim)
 				{
 					if(isCritical)

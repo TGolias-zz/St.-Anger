@@ -32,7 +32,6 @@ public class PlayerMovement : AbstractMovement
 		MoveLocked = false;
 		ForceAim = false;
 		sprintButton = false;
-		isAiming = false;		
 	}
 	
 	void Update()
@@ -53,19 +52,7 @@ public class PlayerMovement : AbstractMovement
 		bool isMoving = h != 0 || v != 0;
 		sprintButton = Input.GetButton("Sprint");
 		
-		if(sprintButton && isMoving)
 		{
-			Stamina -= Time.fixedDeltaTime;
-			anim.SetBool(AnimationIDs.IS_ATMAXSTAMINA, false);
-			if(Stamina <= 0f)
-			{
-				if(!MoveLocked)
-				{
-					anim.SetTrigger(AnimationIDs.IS_OUTOFSTAMINA);
-					MoveLocked = true;
-				}
-				Stamina = 0;
-			}
 		}
 		else
 		{
@@ -90,6 +77,21 @@ public class PlayerMovement : AbstractMovement
 		AnimationManagement(h, v, isMoving);
 		MovementManagement(h, v, isMoving);
 	}
+
+	public void ExpendStamina(float amount)
+	{
+		Stamina -= amount;
+		anim.SetBool(AnimationIDs.IS_ATMAXSTAMINA, false);
+		if(Stamina <= 0f)
+		{
+			if(!MoveLocked)
+			{
+				anim.SetTrigger(AnimationIDs.IS_OUTOFSTAMINA);
+				MoveLocked = true;
+			}
+			Stamina = 0;
+		}
+	}
 	
 	private void AnimationManagement(float h, float v, bool isMoving)
 	{
@@ -98,7 +100,7 @@ public class PlayerMovement : AbstractMovement
 		if(isAiming)
 		{
 			anim.SetFloat(AnimationIDs.FLOAT_VERTICAL, Mathf.Lerp(anim.GetFloat(AnimationIDs.FLOAT_VERTICAL), v, SpeedDamping * Time.fixedDeltaTime));
-			anim.SetFloat(AnimationIDs.FLOAT_HORIZONTAL, Mathf.Lerp(anim.GetFloat(AnimationIDs.FLOAT_VERTICAL), h, SpeedDamping * Time.fixedDeltaTime));
+			anim.SetFloat(AnimationIDs.FLOAT_HORIZONTAL, Mathf.Lerp(anim.GetFloat(AnimationIDs.FLOAT_HORIZONTAL), h, SpeedDamping * Time.fixedDeltaTime));
 		}
 		else
 		{

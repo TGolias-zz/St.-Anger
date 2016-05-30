@@ -5,8 +5,10 @@ using System.Collections.Generic;
 public class CrowbarScript : MonoBehaviour, ItemScript 
 {
 	public int Damage = 10;
+	public float StaminaExpended = 0.1f;
 	
 	private PlayerItemUse playerInventory;
+	private PlayerMovement playerMovement;
 	private Transform playerTransform;
 	
 	void Awake()
@@ -17,6 +19,7 @@ public class CrowbarScript : MonoBehaviour, ItemScript
 	{
 		this.playerTransform = playerTransform;
 		playerInventory = playerTransform.GetComponent<PlayerItemUse>();
+		playerMovement = playerTransform.GetComponent<PlayerMovement>();
 	}
 			
 	public void IsAiming(bool isAiming)
@@ -31,7 +34,11 @@ public class CrowbarScript : MonoBehaviour, ItemScript
 		if(!playerInventory.IsMoveLocked())
 		{
 			stuffHit = new List<int>();
-			playerInventory.UseMeleeAttack();
+			playerMovement.ExpendStamina(StaminaExpended);
+			if(!playerMovement.MoveLocked)
+			{
+				playerInventory.UseMeleeAttack();
+			}
 		}
 		return true;
 	}
